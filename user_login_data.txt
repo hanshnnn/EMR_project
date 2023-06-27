@@ -1,0 +1,3 @@
+Username,Ic,Password
+patient_Giselle,123456789012,1234567890
+staff_crystal,098765432112,1234567890

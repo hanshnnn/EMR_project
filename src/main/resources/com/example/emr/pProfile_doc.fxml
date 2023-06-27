@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="690.6666666666666" prefWidth="1160.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emr.Controllers.pProfileController">
+   <children>
+      <TabPane layoutY="-4.0" prefHeight="698.0" prefWidth="1160.0" stylesheets="@pProfile.css" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="profile_tab" style="-fx-background-color: #9747ff;" text="Profile" />
+            <Tab fx:id="analysis_tab" text="Analysis" />
+            <Tab fx:id="diagnosis_tab" text="Diagnosis">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="treatment_tab" text="Treatment">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="summary_tab" text="Summary">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label fx:id="label_name" layoutX="378.0" layoutY="70.0" text="NAME:" textFill="WHITE">
+         <font>
+            <Font name="Charter Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_name1" layoutX="439.0" layoutY="70.0" prefHeight="27.0" prefWidth="236.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_pastmedicalrecord" layoutX="704.0" layoutY="70.0" text="PAST MEDICAL RECORD:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_pastmedicalrecord1" layoutX="910.0" layoutY="70.0" prefHeight="27.0" prefWidth="236.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_dob" layoutX="385.0" layoutY="145.0" text="DOB:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_dob1" layoutX="431.0" layoutY="145.0" prefHeight="23.0" prefWidth="246.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_anyallergies" layoutX="704.0" layoutY="145.0" text="ANY ALLERGIES:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_anyallergies1" layoutX="845.0" layoutY="143.0" prefHeight="23.0" prefWidth="271.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_gender" layoutX="354.0" layoutY="222.0" text="GENDER:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_gender1" layoutX="438.0" layoutY="222.0" prefHeight="23.0" prefWidth="246.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_dateofadmission" layoutX="704.0" layoutY="224.0" text="DATE OF ADMISSION:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_dateofadmission1" layoutX="887.0" layoutY="222.0" prefHeight="27.0" prefWidth="222.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_address" layoutX="59.0" layoutY="299.0" text="ADDRESS:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_address1" layoutX="157.0" layoutY="293.0" prefHeight="34.0" prefWidth="181.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_age" layoutX="386.0" layoutY="287.0" text="AGE:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_age1" layoutX="428.0" layoutY="287.0" prefHeight="23.0" prefWidth="246.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_appointmentdate" layoutX="704.0" layoutY="289.0" text="APPOINTMENT DATE:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_appointmentdate1" layoutX="887.0" layoutY="287.0" prefHeight="27.0" prefWidth="246.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="pane_analysishistory" layoutX="196.0" layoutY="381.0" prefHeight="254.0" prefWidth="770.0" style="-fx-background-color: BLACK;" styleClass="analysis-style" stylesheets="@profile.css">
+         <children>
+            <Label fx:id="label_analysishistory" layoutX="36.0" layoutY="21.0" prefHeight="34.0" prefWidth="127.0" text="Analysis History" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="imageview_image" fitHeight="186.0" fitWidth="222.0" layoutX="39.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle blendMode="SCREEN" height="331.0" layoutY="22.0" strokeType="INSIDE" strokeWidth="0.0" width="1159.0">
+         <fill>
+            <LinearGradient endX="0.04275534441805225" startX="0.9762470308788599" startY="0.836104513064133">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5247319936752319" green="0.4020467698574066" blue="0.7894737124443054" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4266041905385496">
+                     <color>
+                        <Color red="0.2703927159309387" green="0.18481968343257904" blue="0.4868420958518982" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="0.8099762470308789" startX="0.334916864608076" startY="0.6935866983372921">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.49327486753463745" green="0.33771929144859314" blue="0.8289473652839661" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4266041905385496">
+                     <color>
+                        <Color red="0.2703927159309387" green="0.18481968343257904" blue="0.4868420958518982" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.16325536370277405" green="0.11695906519889832" blue="0.2631579041481018" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+   </children>
+</AnchorPane>

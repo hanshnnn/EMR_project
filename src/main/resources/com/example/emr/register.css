@@ -1,0 +1,229 @@
+.registrationform {
+    -fx-position: absolute;
+    -fx-background-color: #000000;
+    -fx-height: 606px;
+    -fx-width: 1125px;
+}
+
+.name_label {
+-fx-text-fill: #FFF;
+-fx-font-size: 26.729px;
+-fx-font-family: "Libre Caslon Display";
+-fx-line-spacing: 33.412px;
+}
+
+.IC_label {
+-fx-text-fill: #FFF;
+-fx-font-size: 26.729;
+-fx-font-family: "Libre Caslon Display";
+-fx-line-spacing: 33.412;
+}
+
+.DOB_label {
+-fx-text-fill: #FFF;
+-fx-font-size: 26.729;
+-fx-font-family: "Libre Caslon Display";
+-fx-line-spacing: 33.412;
+}
+
+.Gender_label {
+-fx-text-fill: #FFF;
+-fx-font-size: 26.729;
+-fx-font-family: "Libre Caslon Display";
+-fx-line-spacing: 33.412;
+}
+
+.DOA_label{
+-fx-text-fill: #FFF;
+-fx-font-size: 26.729;
+-fx-font-family: "Libre Caslon Display";
+-fx-line-spacing: 33.412;
+}
+
+.Address_label{
+-fx-text-fill: #FFF;
+-fx-font-size: 26.729;
+-fx-font-family: "Libre Caslon Display";
+-fx-line-spacing: 33.412;
+}
+
+.Allergies_label{
+-fx-text-fill: #FFF;
+-fx-font-size: 26.729;
+-fx-font-family: "Libre Caslon Display";
+-fx-line-spacing: 33.412;
+}
+
+.pmr_label{
+-fx-text-fill: #FFF;
+-fx-font-size: 26.729;
+-fx-font-family: "Libre Caslon Display";
+-fx-line-spacing: 33.412;
+}
+.frame1054 {
+    -fx-height: 83;
+    -fx-width: 96;
+    -fx-padding: 10;
+    -fx-display: flex;
+    -fx-flex-direction: column;
+    -fx-dashed : 5px;
+    -fx-gap: 10;
+    -fx-left: 116;
+    -fx-top: 74;
+    -fx-position: relative;
+}
+
+.uploadimage {
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: right;
+    -fx-vertical-align: top;
+    -fx-font-size: 16;
+    -fx-font-family: "Libre Caslon Display";
+    -fx-left: 90;
+    -fx-top: 199;
+    -fx-width: 124;
+    -fx-height: 13;
+    -fx-position: absolute;
+    -fx-line-spacing: normal;
+    -fx-border-style: hidden;
+    -fx-outline: none;
+}
+
+.name_text {
+    -fx-background-color: #e9e9e9;
+    -fx-height: 30;
+    -fx-width: 245;
+    -fx-border-radius: 10;
+    -fx-padding: 0;
+    -fx-border-style: hidden;
+    -fx-outline: none;
+    -fx-top: 47;
+    -fx-left: 436;
+    -fx-position: absolute;
+}
+
+.ic_text {
+    -fx-background-color: #e9e9e9;
+    -fx-height: 30px;
+    -fx-width: 245px;
+    -fx-border-radius: 10;
+    -fx-padding: 0;
+    -fx-border-style: hidden;
+    -fx-outline: none;
+    -fx-top: 42;
+    -fx-left: 860;
+    -fx-position: absolute;
+}
+
+.dob_text {
+    -fx-background-color: #e9e9e9;
+    -fx-height: 30;
+    -fx-width: 469;
+    -fx-border-radius: 10;
+    -fx-padding: 0;
+    -fx-border-style: hidden;
+    -fx-outline: none;
+    -fx-top: 113;
+    -fx-left: 436;
+    -fx-position: absolute;
+}
+
+.gender_cb {
+    -fx-border-width : 0.5px;
+    -fx-border-color : #ACACAC;
+    -fx-border-radius : 20;
+    -fx-background-radius : 20;
+    -fx-font-size : 15;
+    -fx-padding : 0;
+    -fx-font-weight : 500;
+    -fx-font-family : "Libre Caslon Display";
+}
+
+.gender_cb :hover {
+   -fx-text-fill : #9747FF;
+}
+
+.address_text {
+    -fx-background-color: #e9e9e9;
+    -fx-height: 39;
+    -fx-width: 800;
+    -fx-border-radius: 10;
+    -fx-padding: 0;
+    -fx-border-style: hidden;
+    -fx-outline: none;
+    -fx-top: 250;
+    -fx-left: 152;
+    -fx-position: absolute;
+}
+
+.allergies_cb {
+     -fx-border-width : 0.5px;
+     -fx-border-color : #ACACAC;
+     -fx-border-radius : 20px;
+     -fx-background-radius : 20px;
+     -fx-font-size : 15px;
+     -fx-padding : 0;
+     -fx-font-weight : 500;
+     -fx-font-family : "Libre Caslon Display";
+}
+
+.allergies_cb : hover {
+     -fx-text-fill : #9747FF;
+}
+
+.doa_text {
+    -fx-background-color: #e9e9e9;
+    -fx-height: 44;
+    -fx-width: 469;
+    -fx-border-radius: 10;
+    -fx-padding: 0;
+    -fx-border-style: hidden;
+    -fx-outline: none;
+    -fx-top: 380;
+    -fx-left: 26;
+    -fx-position: absolute;
+}
+
+.medicalr_text {
+    -fx-background-color: #e9e9e9;
+    -fx-height: 128;
+    -fx-width: 577;
+    -fx-border-radius: 20;
+    -fx-padding: 0;
+    -fx-border-style: hidden;
+    -fx-outline: none;
+    -fx-top: 444;
+    -fx-left: 283;
+    -fx-position: absolute;
+}
+
+.image {
+-fx-pref-width: 245;
+-fx-pref-height: 148;
+-fx-background-radius: 20;
+-fx-border-color: rgba(165, 112, 235, 0.92);
+-fx-border-width: 1;
+-fx-border-style: dashed;
+-fx-background-color: rgba(255, 255, 255, 0.28);
+}
+
+
+.submitBtn {
+    -fx-width: 122;
+    -fx-height: 30;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-border-radius: 200;
+    -fx-background-color: #9747FF;
+    -fx-background-insets: 0;
+}
+
+.submitBtn : hover {
+    -fx-font-weight : bold;
+    -fx-background-color : white;
+    -fx-font-size : 14;
+    -fx-text-fill : #9747FF;
+    -fx-border-color : #9747FF;
+    -fx-border-radius : 200;
+}
+

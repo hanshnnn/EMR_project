@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emr.Controllers.PatientMedicineRecordController">
+   <children>
+      <Text fill="#f8f8f8" layoutX="32.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Code :" />
+      <Text fill="WHITE" layoutX="34.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration :" />
+      <Text fill="WHITE" layoutX="35.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity :" />
+      <Text fill="WHITE" layoutX="35.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prescribe By :" />
+      <Text fill="WHITE" layoutX="42.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remarks :" />
+      <Text fill="WHITE" layoutX="262.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD MEDICINE " />
+      <MenuButton fx:id="medicineCode" layoutX="128.0" layoutY="67.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="168.0" textFill="WHITE">
+         <items>
+            <MenuItem fx:id="A100" mnemonicParsing="false" text="CODE A100" />
+            <MenuItem fx:id="A200" mnemonicParsing="false" text="CODE A200" />
+            <MenuItem fx:id="A300" mnemonicParsing="false" text="CODE A300" />
+            <MenuItem fx:id="A400" mnemonicParsing="false" text="CODE A400" />
+            <MenuItem fx:id="A500" mnemonicParsing="false" text="CODE A500" />
+            <MenuItem fx:id="A600" mnemonicParsing="false" text="CODE A600" />
+            <MenuItem fx:id="A700" mnemonicParsing="false" text="CODE A700" />
+            <MenuItem fx:id="A800" mnemonicParsing="false" text="CODE A800" />
+            <MenuItem fx:id="A900" mnemonicParsing="false" text="CODE A900" />
+            <MenuItem fx:id="A1000" mnemonicParsing="false" text="CODE A1000" />
+            <MenuItem fx:id="A1100" mnemonicParsing="false" text="CODE A1100" />
+            <MenuItem fx:id="A1200" mnemonicParsing="false" text="CODE A1200" />
+            <MenuItem fx:id="A1300" mnemonicParsing="false" text="CODE A1300" />
+            <MenuItem fx:id="A1400" mnemonicParsing="false" text="CODE A1400" />
+            <MenuItem fx:id="A1500" mnemonicParsing="false" text="CODE A1500" />
+            <MenuItem fx:id="A1600" mnemonicParsing="false" text="CODE A1600" />
+            <MenuItem fx:id="A1700" mnemonicParsing="false" text="CODE A1700" />
+            <MenuItem fx:id="A1800" mnemonicParsing="false" text="CODE A1800" />
+            <MenuItem fx:id="A1900" mnemonicParsing="false" text="CODE A1900" />
+            <MenuItem fx:id="A2000" mnemonicParsing="false" text="CODE A2000" />
+            <MenuItem fx:id="A2100" mnemonicParsing="false" text="CODE A2100" />
+            <MenuItem fx:id="A2200" mnemonicParsing="false" text="CODE A2200" />
+            <MenuItem fx:id="A2300" mnemonicParsing="false" text="CODE A2300" />
+            <MenuItem fx:id="A2400" mnemonicParsing="false" text="CODE A2400" />
+            <MenuItem fx:id="A2500" mnemonicParsing="false" text="CODE A2500" />
+            <MenuItem fx:id="A2600" mnemonicParsing="false" text="CODE A2600" />
+         </items>
+         <graphic>
+            <Label fx:id="chosenMC" prefHeight="15.0" prefWidth="142.0" />
+         </graphic>
+      </MenuButton>
+      <TextField fx:id="duration" layoutX="105.0" layoutY="108.0" />
+      <TextField fx:id="quantity" layoutX="109.0" layoutY="153.0" />
+      <MenuButton fx:id="prescribedBy" layoutX="120.0" layoutY="198.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="168.0" textFill="WHITE">
+         <items>
+            <MenuItem fx:id="DocZ" mnemonicParsing="false" text="Dr.Zalini Hamzah" />
+            <MenuItem fx:id="DocS" mnemonicParsing="false" text="Dr.Siti Anna" />
+            <MenuItem fx:id="DocM" mnemonicParsing="false" text="Dr.Mike Andrewson" />
+         </items>
+         <graphic>
+            <Label fx:id="chosenDoc" prefHeight="18.0" prefWidth="132.0" />
+         </graphic>
+      </MenuButton>
+      <TextArea fx:id="remarks" layoutX="105.0" layoutY="247.0" prefHeight="107.0" prefWidth="388.0" />
+      <Button fx:id="saveButton" layoutX="544.0" layoutY="363.0" mnemonicParsing="false" style="-fx-background-color: A570EB;" text="Save" textFill="#f8f8f8" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emr.Controllers.RegistrationAccountController">
+   <left>
+      <AnchorPane prefHeight="720.0" prefWidth="149.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView blendMode="HARD_LIGHT" fitHeight="60.0" fitWidth="65.0" layoutX="43.0" layoutY="154.0">
+               <image>
+                  <Image url="@../../../image/default.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="33.0" layoutY="597.0">
+               <image>
+                  <Image url="@../../../image/user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="720.0" prefWidth="1205.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator layoutY="146.0" prefHeight="1.0" prefWidth="1132.0" />
+            <ImageView fitHeight="154.0" fitWidth="1133.0" layoutY="-8.0">
+               <image>
+                  <Image url="@../../../image/live the healthy way.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="83.0" fitWidth="549.0" layoutX="63.0" layoutY="177.0">
+               <image>
+                  <Image url="@../../../image/Register With Us.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="158.0" layoutX="66.0" layoutY="300.0">
+               <image>
+                  <Image url="@../../../image/Username _.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="101.0" layoutX="66.0" layoutY="375.0">
+               <image>
+                  <Image url="@../../../image/IC No. _.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="123.0" layoutX="63.0" layoutY="441.0">
+               <image>
+                  <Image url="@../../../image/Password _.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="registerUsername" layoutX="263.0" layoutY="300.0" prefHeight="36.0" prefWidth="363.0" />
+            <TextField fx:id="registerIc" layoutX="263.0" layoutY="368.0" prefHeight="36.0" prefWidth="363.0" />
+            <TextField fx:id="registerPassword" layoutX="263.0" layoutY="436.0" prefHeight="36.0" prefWidth="363.0" />
+            <TextField fx:id="registerConfirmPassw" layoutX="337.0" layoutY="511.0" prefHeight="36.0" prefWidth="363.0" />
+            <Separator orientation="VERTICAL" prefHeight="720.0" prefWidth="0.0" />
+            <Button fx:id="saveRegister" layoutX="527.0" layoutY="649.0" mnemonicParsing="false" onAction="#addData" style="-fx-background-color: #9000ff;" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville" size="19.0" />
+               </font></Button>
+            <ImageView fitHeight="21.0" fitWidth="201.0" layoutX="63.0" layoutY="519.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/Confirm Password _.png" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="SCREEN" fitHeight="576.0" fitWidth="1131.0" layoutX="3.0" layoutY="147.0">
+               <image>
+                  <Image url="@../../../image/Coupons%20%20Token%20%20Tickets%20(2).png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-0.73" contrast="-0.12" hue="-0.26" saturation="0.26" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

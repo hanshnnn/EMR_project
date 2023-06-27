@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="1283.0" style="-fx-background-color: #1E1E1E;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator layoutX="115.0" orientation="VERTICAL" prefHeight="720.0" prefWidth="7.0" />
+      <TabPane layoutX="119.0" prefHeight="723.0" prefWidth="1160.0" style="-fx-background-color: #1E1E1E;" tabClosingPolicy="UNAVAILABLE" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Profile" />
+          <Tab text="Analysis">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="620.0" prefWidth="1160.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="37.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEST TYPE :">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="18.0" />
+                           </font>
+                        </Text>
+                        <ComboBox layoutX="159.0" layoutY="39.0" prefHeight="35.0" prefWidth="252.0" promptText="Physical_analysis" />
+                        <Text fill="WHITE" layoutX="145.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Pressure: ">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="145.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart rate: ">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="145.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Body Temperature: ">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="147.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height: ">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="18.0" />
+                           </font>
+                        </Text>
+                        <MenuButton layoutX="572.0" layoutY="306.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="87.0" style="-fx-background-color: #9000ff;" text="unit" textFill="WHITE">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="cm" />
+                            <MenuItem mnemonicParsing="false" text="ft." />
+                          </items>
+                        </MenuButton>
+                        <Text fill="WHITE" layoutX="149.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remarks :">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="18.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="964.0" layoutY="599.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="102.0" style="-fx-background-color: #9000ff; -fx-background-radius: 20;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font name="Bookshelf Symbol 7" size="21.0" />
+                           </font></Button>
+                        <TextField layoutX="325.0" layoutY="117.0" prefHeight="32.0" prefWidth="550.0" style="-fx-background-color: #F9F6EE; -fx-background-radius: 7;" />
+                        <TextField layoutX="325.0" layoutY="180.0" prefHeight="32.0" prefWidth="550.0" style="-fx-background-color: #F9F6EE; -fx-background-radius: 7;" />
+                        <TextField layoutX="325.0" layoutY="243.0" prefHeight="32.0" prefWidth="550.0" style="-fx-background-color: #F9F6EE; -fx-background-radius: 7;" />
+                        <TextField layoutX="325.0" layoutY="303.0" prefHeight="32.0" prefWidth="225.0" style="-fx-background-color: #F9F6EE; -fx-background-radius: 7;" />
+                        <Text fill="WHITE" layoutX="145.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI Index: ">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="325.0" layoutY="363.0" prefHeight="32.0" prefWidth="554.0" style="-fx-background-color: #F9F6EE; -fx-background-radius: 7;" />
+                        <Text fill="WHITE" layoutX="731.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight: ">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="811.0" layoutY="303.0" prefHeight="32.0" prefWidth="190.0" style="-fx-background-color: #F9F6EE; -fx-background-radius: 7;" />
+                        <TextField alignment="TOP_LEFT" layoutX="323.0" layoutY="438.0" prefHeight="153.0" prefWidth="554.0" style="-fx-background-color: #F9F6EE; -fx-background-radius: 7;" />
+                        <MenuButton layoutX="1022.0" layoutY="306.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="87.0" style="-fx-background-color: #9000ff;" text="unit" textFill="WHITE">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="kg" />
+                              <MenuItem mnemonicParsing="false" text="lbs." />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Diagnosis">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Treatment">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Summary">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

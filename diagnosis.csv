@@ -1,0 +1,19 @@
+ic,doa,symptoms,remark,practitioner,diagnosis_code 
+020616-11-8867,19-06-2023,Vomiting,h,Dr. Michael Smith ,J45.20=Mild intermittent asthma
+020616-11-8867,19-06-2023,Vomiting Shortness of breath,hello,Dr. Emily Johnson,J45.20=Mild intermittent asthma
+020616-11-8867,19-06-2023,Vomiting Diarrhea,hihih,Dr. Emily Johnson,O24.4=Gestational diabetes
+020616-11-8867,19-06-2023,Fatigue Vomiting,ni lao mu,Dr. Christopher Brown,J45.21=Mild persistent asthma
+020616-11-8867,19-06-2023,Vomiting Chest pain,he,Dr. David Wilson,E11=Type-2 diabetes
+020616-11-8867,19-06-2023,Fatigue Diarrhea,hu,Dr. Samantha Thompson,J45.20=Mild intermittent asthma
+020616-11-8867,2023-06-19,Chest pain Diarrhea,huhu,Dr. Sarah Davis,J45.21=Mild persistent asthma
+020616-11-8867,2023-06-19,Abdominal pain Fatigue,hi,Dr. Jessica Anderson,I10=ICD-10 Hypertension
+020616-11-8867,2023-06-19,Diarrhea Shortness of breath,hi,Dr. Emily Johnson,J45.21=Mild persistent asthma
+020616-11-8867,2023-06-19,Nausea Abdominal pain,hi,Dr. Christopher Brown,J45.20=Mild intermittent asthma
+020616-11-8867,2023-06-19,Vomiting Abdominal pain,h,Dr. Sarah Davis,J45.21=Mild persistent asthma
+020616-11-8867,2023-06-19,Nausea,h,Dr. Sarah Davis,O24.4=Gestational diabetes
+020616-11-8867,2023-06-19,Fatigue,f,Dr. Samantha Thompson,J45.22=Moderate persistent asthma
+020616-11-8867,2023-06-19,Abdominal pain Chest pain,g,Dr. Michael Smith ,O24.4=Gestational diabetes
+020616-11-8867,2023-06-19,Vomiting,f,Dr. Jessica Anderson,J45.22=Moderate persistent asthma
+020616-11-8867,2023-06-19,Nausea Diarrhea,f,Dr. Jessica Anderson,J45.21=Mild persistent asthma
+020616-11-8867,2023-06-19,Vomiting Chest pain,h,Dr. Sarah Davis,J45.20=Mild intermittent asthma
+030904-11-1718,2023-08-17,Diarrhea,h,Dr. Sarah Davis,J45.21=Mild persistent asthma

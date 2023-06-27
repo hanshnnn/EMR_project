@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="treatment_pane" prefHeight="720.0" prefWidth="1165.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emr.Controllers.TreatmentController">
+    <children>
+        <TabPane prefHeight="727.0" prefWidth="1260.0" stylesheets="@treatment.css" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="profile_tab" text="Profile" />
+                <Tab fx:id="analysis_tab" text="Analysis" />
+                <Tab fx:id="diagnosis_tab" text="Diagnosis">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <Tab fx:id="treatment_tab" style="-fx-background-color: #9747ff;" text="Treatment" />
+                <Tab fx:id="summary_tab" text="Summary">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Text fx:id="diagCode_text" fill="WHITE" layoutX="27.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnosis Code :">
+            <font>
+                <Font size="24.0" />
+            </font></Text>
+        <Text fx:id="appointDate_text" fill="WHITE" layoutX="776.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Date :">
+            <font>
+                <Font size="24.0" />
+            </font></Text>
+        <ImageView fx:id="generateSum_Btn" fitHeight="38.0" fitWidth="177.0" layoutX="1082.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../image/generateSummary.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="image_add" fitHeight="55.0" fitWidth="55.0" layoutX="1034.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../image/add button.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="diagCode_label" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="206.0" layoutY="42.0" prefHeight="34.0" prefWidth="324.0" style="-fx-background-color: #ffff; -fx-background-radius: 15;" wrapText="true">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="displayBtn2" alignment="CENTER" contentDisplay="TEXT_ONLY" graphicTextGap="2.0" layoutX="918.0" layoutY="114.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: A570EB;" text="Display" textFill="WHITE" wrapText="true" />
+        <DatePicker fx:id="datePicker" layoutX="1003.0" layoutY="44.0" prefHeight="32.0" prefWidth="202.0" />
+      <TableView fx:id="table_medicine" layoutX="45.0" layoutY="411.0" prefHeight="280.0" prefWidth="955.0" style="-fx-background-color: #000000;" stylesheets="@treatment.css">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy></TableView>
+        <TableView fx:id="table_procedure" layoutX="50.0" layoutY="145.0" prefHeight="225.0" prefWidth="955.0" style="-fx-background-color: #000000;" stylesheets="@treatment.css">
+            <columns>
+                <TableColumn fx:id="codeColumn" prefWidth="266.0000114440918" text="Code" />
+                <TableColumn fx:id="dateColumn" prefWidth="142.66668701171875" text="Date" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="431.9999694824219" text="Description" />
+                <TableColumn fx:id="priceColumn" prefWidth="114.0" text="Price" />
+            </columns>
+        </TableView>
+      <Button fx:id="displayBtn3" alignment="CENTER" contentDisplay="TEXT_ONLY" graphicTextGap="2.0" layoutX="917.0" layoutY="379.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: A570EB;" text="Display" textFill="WHITE" wrapText="true" />
+      <Text fx:id="diagCode_text1" fill="WHITE" layoutX="37.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procedure :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="diagCode_text11" fill="WHITE" layoutX="40.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="image_add1" fitHeight="55.0" fitWidth="55.0" layoutX="1037.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/add button.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+.image-style {
+    -fx-pref-width: 301px;
+    -fx-pref-height: 249px;
+    -fx-min-width: 301px;
+    -fx-max-width: 301px;
+    -fx-min-height: 249px;
+    -fx-max-height: 249px;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+    -fx-border-style: dashed;
+    -fx-border-color: #E0E4EB;
+    -fx-background-color: rgba(255, 255, 255, 0.28);
+    -fx-background-radius: 20px;
+    -fx-background-insets: 0;
+    -fx-shape: "M0,0H301V249H0Z";
+}
+
+.analysis-style {
+    -fx-border-width: 2px;
+    -fx-border-color: #9747FF;
+    -fx-background-color: #000;
+}
+
+.linear-style{
+    -fx-pref-width: 1268px;
+    -fx-pref-height: 438px;
+    -fx-min-width: 1268px;
+    -fx-max-width: 1268px;
+    -fx-min-height: 438px;
+    -fx-max-height: 438px;
+    -fx-flex-shrink: 0;
+}

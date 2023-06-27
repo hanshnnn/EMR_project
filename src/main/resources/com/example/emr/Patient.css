@@ -1,0 +1,170 @@
+.patient {
+    -fx-position: absolute;
+    -fx-background-color: rgba(0, 0, 0, 0.25);
+    -fx-height: 1024px;
+    -fx-width: 1440px;
+    -fx-padding: 0px;
+}
+
+.image2 {
+    -fx-fit-height: 64px;
+    -fx-fit-width: 74px;
+    -fx-left: 44px;
+    -fx-top: 177px;
+    -fx-position: absolute;
+}
+
+.image2:hover {
+    -fx-background-color: #383838;
+    -fx-scale-y: 1.3;
+    -fx-scale-x: 1.3;
+}
+
+.image2:pressed {
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}
+
+.menu-default {
+    -fx-fit-height: 81px;
+    -fx-fit-width: 83px;
+    -fx-padding: 0px;
+    -fx-left: 1036px;
+    -fx-top: 0px;
+    -fx-position: absolute;
+}
+
+.menu-default:hover {
+    -fx-background-color: #383838;
+    -fx-scale-y: 1.3;
+    -fx-scale-x: 1.3;
+}
+
+.menu-default:pressed {
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}
+
+.menu-user_circle {
+    -fx-fit-height: 115px;
+    -fx-fit-width: 118px;
+    -fx-padding: 0px;
+    -fx-left: 25px;
+    -fx-top: 872px;
+    -fx-position: absolute;
+}
+
+.menu-user_circle:hover {
+    -fx-background-color: #383838;
+    -fx-scale-y: 1.3;
+    -fx-scale-x: 1.3;
+}
+
+.menu-user_circle:pressed {
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}
+
+.rectangle1 {
+    -fx-background-color: #d9d9d9;
+    -fx-height: 76px;
+    -fx-width: 1006px;
+    -fx-effect: drop shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -fx-border-radius: 30px;
+    -fx-border-width: 1px;
+    -fx-border-color: #000000;
+}
+
+.menu-add_ring {
+    -fx-fit-height: 80px;
+    -fx-fit-width: 84px;
+    -fx-padding: 0px;
+    -fx-border-style: hidden;
+    -fx-outline: none;
+    -fx-left: 1293px;
+    -fx-top: 87px;
+    -fx-position: absolute;
+}
+
+.menu-add_ring:hover {
+    -fx-background-color: #383838;
+    -fx-scale-y: 1.3;
+    -fx-scale-x: 1.3;
+}
+
+.menu-add_ring:pressed {
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}
+
+.menu-view {
+    -fx-background-color: #9747ff;
+    -fx-height: 34px;
+    -fx-width: 117px;
+    -fx-border-radius: 20px;
+    -fx-padding: 0px;
+    -fx-border-style: hidden;
+    -fx-outline: none;
+}
+
+.menu-view:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #9747FF;
+    -fx-scale-y: 1.3;
+    -fx-scale-x: 1.3;
+}
+
+.menu-view:pressed {
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}
+
+.line1 {
+    -fx-width: 1024px;
+    -fx-rotate: -90deg;
+    -fx-border-width: 1px;
+    -fx-border-color: #ffffff;
+}
+
+
+.table-view {
+    -fx-background-color: #000000;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+}
+
+.table-view .column-header,
+.table-view .table-cell {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .column-header .label,
+.table-view .table-cell .text {
+    -fx-text-fill: #ffffff;
+}
+
+.table-row-cell {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ffffff;
+    -fx-padding: 0.0 0.0 0.5 0.0;
+}
+
+.table-view :hover {
+    -fx-background-color: #9747FF;
+}
+
+
+.table-view .column-header-background {
+    -fx-border-width: 0;
+}
+
+.table-view {
+    -fx-border-color: ffffff;
+    -fx-border-width: 1px;
+}
+
+.table-view .table-row-cell {
+    -fx-border-color: ffffff;
+    -fx-border-width: 0 0 1px 0;
+}

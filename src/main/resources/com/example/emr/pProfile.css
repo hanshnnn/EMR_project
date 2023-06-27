@@ -1,0 +1,6 @@
+.tab-pane .tab{
+-fx-background-color : #000000;
+}
+.tab-pane .tab .tab-label {
+-fx-text-fill : #ffffff;
+}

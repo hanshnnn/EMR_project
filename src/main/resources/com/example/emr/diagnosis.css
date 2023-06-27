@@ -1,0 +1,44 @@
+.add_diagnosisBtn{
+-fx-width: 122;
+    -fx-height: 30;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-border-radius: 200;
+    -fx-background-color: #9747FF;
+    -fx-background-insets: 0;
+}
+
+.add_diagnosisBtn : hover{
+ -fx-font-weight : bold;
+    -fx-background-color : white;
+    -fx-font-size : 14;
+    -fx-text-fill : #9747FF;
+    -fx-border-color : #9747FF;
+    -fx-border-radius : 200;
+}
+
+.treatmentBtn{
+-fx-width: 122;
+    -fx-height: 30;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-border-radius: 200;
+    -fx-background-color: #9747FF;
+    -fx-background-insets: 0;
+}
+
+.treatmentBtn : hover{
+ -fx-font-weight : bold;
+    -fx-background-color : white;
+    -fx-font-size : 14;
+    -fx-text-fill : #9747FF;
+    -fx-border-color : #9747FF;
+    -fx-border-radius : 200;
+}
+
+.tab-pane .tab{
+-fx-background-color : #000000;
+}
+.tab-pane .tab .tab-label {
+-fx-text-fill : #ffffff;
+}
