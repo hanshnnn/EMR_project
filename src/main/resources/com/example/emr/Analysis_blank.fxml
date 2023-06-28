@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="704.0" prefWidth="1094.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emr.Controllers.analysisBlankController">
+   <children>
+      <TabPane layoutY="-1.0" prefHeight="704.0" prefWidth="1097.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab />
+            <Tab fx:id="profile_tabb" text="Profile" />
+            <Tab fx:id="analysis_tab" style="-fx-background-color: #9747FF; -fx-text-fill: white;" text="Analysis" />
+            <Tab fx:id="diagnosis_tab" disable="true" text="Diagnosis" />
+            <Tab fx:id="treatment_tab" disable="true" text="Treatment" />
+            <Tab fx:id="summary_tab" disable="true" text="Summary" />
+         </tabs>
+      </TabPane>
+      <MenuButton fx:id="select" layoutX="201.0" layoutY="76.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="252.0" text="Select Analysis Type">
+         <items>
+            <MenuItem fx:id="bloodAnalysis" mnemonicParsing="false" text="Blood Analysis" />
+            <MenuItem fx:id="PhysicalAnalysis" mnemonicParsing="false" text="Physical Analysis" />
+            <MenuItem fx:id="SalivaAnalysis" mnemonicParsing="false" text="Saliva Analysis" />
+            <MenuItem fx:id="UrineAnalysis" mnemonicParsing="false" text="Urine Analysis" />
+            <MenuItem fx:id="XRayAnalysis" mnemonicParsing="false" text="XRay Analysis" />
+         </items>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </MenuButton>
+      <Text fill="WHITE" layoutX="43.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEST TYPE :" wrappingWidth="133.1781463623047">
+         <font>
+            <Font name="Microsoft Sans Serif" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
