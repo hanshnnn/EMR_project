@@ -1,4 +1,16 @@
 ic,doa,name,dob,gender,address,allergies,pmr
-030904-11-1718,2023-06-13,John Doe,2008-06-05,male,emelia garden,seafood,this is the first customer
-020519-10-8789,2023-06-22,Danny Crist,2009-06-11,male,USJ 3,seafood,He came from Finland
-041117-11-1718,2023-05-31,Yari,2002-05-29,female,Adari,dairy products,second customer bruh
+030904-11-1718,2023-01-15,John Doe,1990-05-15,male,123 Main St,diary products,History of asthma
+010609-22-0304,2023-02-10,Jane Smith,1985-09-02,female,456 Elm St,NONE,High blood pressure
+021011-33-4405,2023-03-22,Michael Johnson,1978-12-28,male,789 Oak Ave,seafoods,Allergic to penicillin
+041215-44-7606,2023-04-07,Sarah Wilson,1995-02-10,female,321 Pine St,nuts,Previous surgery on knee
+051025-55-8807,2023-05-19,David Brown,1982-07-19,male,567 Maple Rd,pineapple,Family history of diabetes
+060401-66-9908,2023-06-02,Emily Davis,1998-11-03,female,890 Cherry Ln,NONE,No known medical conditions
+070708-77-1109,2023-07-11,Robert Johnson,1973-04-21,male,234 Oak St,NONE,Seasonal allergies
+080913-88-4410,2023-08-25,Lisa Thompson,1989-08-07,female,567 Pine Ave,NONE,Hypothyroidism
+091122-99-6611,2023-09-13,Christopher Lee,1996-01-29,male,890 Maple Rd,diary products,History of migraines
+101216-10-8812,2023-10-07,Amanda Wilson,1983-09-12,female,123 Elm St,nuts,Allergic to cats
+030904-11-1718,2023-06-01,John Smith,1990-05-15,Male,123 Main St,NONE,No known medical remarks
+010609-22-0304,2023-06-01,Emma Johnson,1985-10-12,Female,456 Elm St,Nuts,Requires regular check-ups
+021011-33-4405,2023-06-02,Liam Davis,1992-02-25,Male,789 Oak Ave,Seafoods,No known medical remarks
+041215-44-7606,2023-06-02,Olivia Wilson,1988-08-06,Female,987 Pine St,Pineapple,Allergic to penicillin
+051025-55-8807,2023-06-01,Noah Martinez,1995-09-30,Male,654 Cedar Rd,Diary products,No known medical remarks
