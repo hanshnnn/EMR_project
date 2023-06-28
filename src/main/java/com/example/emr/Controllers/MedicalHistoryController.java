@@ -207,11 +207,34 @@ public class MedicalHistoryController extends  RegistrationAccountController imp
 
         save_Btn.setOnAction(e -> {
             try {
+                // Check if all buttons have been clicked
+                if (selectedToggleButtonText == null || radioButtonTexts.size() < 8) {
+                    throw new IllegalStateException("Please click all buttons before saving.");
+                }
                 saveSelectedDataToCSV();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Message");
+                alert.setHeaderText(null);
+                alert.setContentText("Medical history saved!");
+                alert.show();
+                System.out.println("Medical history saved.");
             } catch (IOException ex) {
-                throw new RuntimeException(ex);
+                ex.printStackTrace();
+                // Show an error message
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("An error occurred while saving the data.");
+                alert.show();
+            } catch (IllegalStateException ex) {
+                ex.printStackTrace();
+                // Show a warning message
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Warning");
+                alert.setHeaderText(null);
+                alert.setContentText(ex.getMessage());
+                alert.show();
             }
-
         });
 
     }

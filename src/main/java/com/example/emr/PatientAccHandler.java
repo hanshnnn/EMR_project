@@ -1,28 +1,20 @@
 package com.example.emr;
 
-import com.example.emr.Controllers.PatientRecordController;
+import com.example.emr.Records.PatientRecord;
 
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class PatientAccHandler {
     private String delimiter = ",";
     private String newline = "\n";
     //need delete id from the header
-    private String header = "id,name,ic,dob,gender,address,allergies,doa,pmr";
+    private String header = "ic,doa,name,dob,gender,address,allergies,pmr";
 
     public PatientAccHandler() {
-    }
-
-    public PatientAccHandler(String header, String delimiter, String newline) {
-        this.header = header;
-        this.delimiter = delimiter;
-        this.newline = newline;
     }
 
     public void writeCSV(List<PatientRecord> patients, String filename) throws IOException {
@@ -35,19 +27,19 @@ public class PatientAccHandler {
             patient_file.append(newline);
 
             for (PatientRecord patientRecord : patients) {
-                patient_file.append(patientRecord.getP_Name());
-                patient_file.append(delimiter);
                 patient_file.append(patientRecord.getP_Ic());
                 patient_file.append(delimiter);
-                patient_file.append(patientRecord.getP_Dob());
+                patient_file.append(patientRecord.getP_Doa().toString());
+                patient_file.append(delimiter);
+                patient_file.append(patientRecord.getP_Name());
+                patient_file.append(delimiter);
+                patient_file.append(patientRecord.getP_Dob().toString());
                 patient_file.append(delimiter);
                 patient_file.append(patientRecord.getP_Gender());
                 patient_file.append(delimiter);
                 patient_file.append(patientRecord.getP_Address());
                 patient_file.append(delimiter);
                 patient_file.append(patientRecord.getP_Allergies());
-                patient_file.append(delimiter);
-                patient_file.append(patientRecord.getP_Doa());
                 patient_file.append(delimiter);
                 patient_file.append(patientRecord.getP_Pmr());
                 patient_file.append(newline);
@@ -83,16 +75,15 @@ public class PatientAccHandler {
             bReader.readLine();
             while ((line = bReader.readLine()) != null) {
                 String[] values = line.split(delimiter);
-                if (values.length >= 8) {
+
+                // convert string into Local Date format
+                LocalDate doa = LocalDate.parse(values[1]);
+                LocalDate dob = LocalDate.parse(values[3]);
+
+                if (values.length > 0) {
                     // content separated by delimeter (normally, a comma ',')
-                    PatientRecord patient = new PatientRecord(values[0],values[1], LocalDate.parse(values[2]),values[3],values[4],values[5],LocalDate.parse(values[6]),values[7]);
+                    PatientRecord patient = new PatientRecord(values[0],doa,values[2],dob,values[4],values[5],values[6],values[7]);
                     patients.add(patient);
-                    /*try {
-                        Thread.sleep(3000);
-                    } catch (InterruptedException ex) {
-                        Logger.getLogger(PatientRecordController.class.getName())
-                                .log(Level.SEVERE, null, ex);
-                    }*/
                 }
             }
         } catch (FileNotFoundException e) {

@@ -18,7 +18,8 @@
     <children>
         <TabPane prefHeight="727.0" prefWidth="1260.0" stylesheets="@treatment.css" tabClosingPolicy="UNAVAILABLE">
             <tabs>
-                <Tab fx:id="profile_tab" text="Profile" />
+            <Tab fx:id="profile_tabb1" />
+                <Tab fx:id="profile_tabb" text="Profile" />
                 <Tab fx:id="analysis_tab" text="Analysis" />
                 <Tab fx:id="diagnosis_tab" text="Diagnosis">
                     <content>
@@ -26,11 +27,6 @@
                     </content>
                 </Tab>
                 <Tab fx:id="treatment_tab" style="-fx-background-color: #9747ff;" text="Treatment" />
-                <Tab fx:id="summary_tab" text="Summary">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
-                </Tab>
             </tabs>
         </TabPane>
         <Text fx:id="diagCode_text" fill="WHITE" layoutX="27.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnosis Code :">
@@ -41,11 +37,6 @@
             <font>
                 <Font size="24.0" />
             </font></Text>
-        <ImageView fx:id="generateSum_Btn" fitHeight="38.0" fitWidth="177.0" layoutX="1082.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../image/generateSummary.png" />
-            </image>
-        </ImageView>
         <ImageView fx:id="image_add" fitHeight="55.0" fitWidth="55.0" layoutX="1034.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../image/add button.png" />

@@ -1,6 +1,7 @@
 package com.example.emr.Controllers;
 
 import com.example.emr.*;
+import com.example.emr.Records.PatientRecord;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -15,7 +16,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-public class PatientProcedureRecordController  implements Initializable {
+public class PatientProcedureRecordController{
     @FXML
     public TableView<PatientProcedureRecord> table_procedure;
     @FXML
@@ -43,8 +44,9 @@ public class PatientProcedureRecordController  implements Initializable {
     protected ObservableList<PatientProcedureRecord> procedureList = FXCollections.observableArrayList();
     private PatientRecord rowData;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    public void initialize(PatientRecord rowData) {
+        this.rowData = rowData;
         displayBtn.setOnAction(e -> {
             if (matchingRecords.isEmpty()) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);

@@ -10,4 +10,6 @@ module com.example.emr {
     opens com.example.emr.Controllers to javafx.fxml;
     exports com.example.emr.ActionCells;
     opens com.example.emr.ActionCells to javafx.fxml;
+    exports com.example.emr.Records;
+    opens com.example.emr.Records to javafx.fxml;
 }

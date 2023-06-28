@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
@@ -22,12 +24,7 @@
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                </content>
             </Tab>
-            <Tab fx:id="treatment_tab" text="Treatment">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-            <Tab fx:id="summary_tab" text="Summary">
+            <Tab fx:id="treatment_tab" disable="true" text="Treatment">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                </content>
@@ -124,7 +121,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="pane_analysishistory" layoutX="196.0" layoutY="381.0" prefHeight="254.0" prefWidth="770.0" style="-fx-background-color: BLACK;" styleClass="analysis-style" stylesheets="@profile.css">
+      <AnchorPane fx:id="pane_analysishistory" layoutX="53.0" layoutY="381.0" prefHeight="295.0" prefWidth="1042.0" style="-fx-background-color: BLACK;" styleClass="analysis-style" stylesheets="@profile.css">
          <children>
             <Label fx:id="label_analysishistory" layoutX="36.0" layoutY="21.0" prefHeight="34.0" prefWidth="127.0" text="Analysis History" textFill="WHITE">
                <font>
@@ -178,5 +175,10 @@
             </LinearGradient>
          </stroke>
       </Rectangle>
+      <ScrollPane layoutX="89.0" layoutY="438.0" prefHeight="221.0" prefWidth="974.0">
+         <content>
+            <TableView fx:id="historyTable" prefHeight="264.0" prefWidth="970.0" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

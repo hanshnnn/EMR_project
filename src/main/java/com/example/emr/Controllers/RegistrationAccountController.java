@@ -28,8 +28,7 @@ public class RegistrationAccountController {
 
 
     public void patientbacklogin(MouseEvent event) throws Exception {
-        ViewModel m = new ViewModel();
-        m.showLogin();
+        ViewModel.showLogin();
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success");
         alert.setHeaderText("Operation Successful");
@@ -37,7 +36,7 @@ public class RegistrationAccountController {
 
         // Display the Alert pop-up
         alert.showAndWait();
-        m.showLogin();
+        ViewModel.showLogin();
     }
 
 
@@ -132,7 +131,7 @@ public class RegistrationAccountController {
         }
 
 
-        String filename ="RegistrationData.txt";
+        String filename ="user_login_data.txt";
         String content = registerUsername.getText().toString() + "," + registerIc.getText().toString() + "," + registerPassword.getText().toString();
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename,true))) {
@@ -144,16 +143,11 @@ public class RegistrationAccountController {
             alert.setHeaderText("Operation Successful");
             alert.setContentText("You have successfully registered!");
             alert.showAndWait();
-            m.showLogin();
+            ViewModel.showLogin();
         } catch (IOException e) {
             System.err.println("An error occurred while writing to the file: " + e.getMessage());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
-
-
-
-
 }

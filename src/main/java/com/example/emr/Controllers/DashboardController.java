@@ -1,14 +1,18 @@
 package com.example.emr.Controllers;
 import com.example.emr.PatientAccHandler;
-import com.example.emr.PatientRecord;
+import com.example.emr.Records.PatientRecord;
 import com.example.emr.ViewModel;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableCell;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
@@ -25,37 +29,35 @@ public class DashboardController extends TableCell<PatientRecord, Void> implemen
         public ImageView home;
         public Pane LivePatientPane;
         public javafx.scene.chart.LineChart LineChart;
-    public Label patient_count;
-    public Label doctor_count;
-    public Pane doctors_count;
+        public Label patient_count;
+        public Label doctor_count;
+        public Pane doctors_count;
 
-    PatientAccHandler patientAccHandler = new PatientAccHandler();
-    List<PatientRecord> patientRecords = patientAccHandler.readCSV(PatientRecord.filename);
+        PatientAccHandler patientAccHandler = new PatientAccHandler();
+        List<PatientRecord> patientRecords = patientAccHandler.readCSV(PatientRecord.filename);
 
-    private String enteredUsername; // Variable to store the username
+        private String enteredUsername; // Variable to store the username
 
-   //initialize the dashboard with the provided username. It sets the enteredUsername variable to the given username//
-    public void initializeDashboard(String enteredUsername) {
-        this.enteredUsername = enteredUsername;
-    }
-
+        //initialize the dashboard with the provided username. It sets the enteredUsername variable to the given username//
+        public void initializeDashboard(String enteredUsername) {
+            this.enteredUsername = enteredUsername;
+        }
         @Override
         public void initialize (URL url, ResourceBundle resourceBundle){
         menu.setOnMouseClicked(mouseEvent -> {
             if (enteredUsername.startsWith("patient_")) {
                 // Check if the user is logged in as a patient
-                ViewModel m = new ViewModel();
                 // Redirect to patient profile page
                 try {
-                    m.patientProfile();
+                    patientView();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+
             } else if (enteredUsername.startsWith("staff_")) {
                 // Check if the user is logged in as a staff member
-                ViewModel m = new ViewModel();
                 // Redirect to staff profile page*/
-                new ViewModel().getPatientRecord();
+                ViewModel.getPatientRecord();
             }
 
         });
@@ -64,7 +66,7 @@ public class DashboardController extends TableCell<PatientRecord, Void> implemen
         calPatient();
     }
 
-    //inLineChart() have the function to display the Line Data getting from the number of patients following the date of admission//
+        //inLineChart() have the function to display the Line Data getting from the number of patients following the date of admission//
         private void inLineChart () {
         LineChart.getXAxis().setLabel("Date Of Admission");
         LineChart.getYAxis().setLabel("Number of Patients");
@@ -86,7 +88,7 @@ public class DashboardController extends TableCell<PatientRecord, Void> implemen
         //populates the line chart with the data from the doaCounter map//
         LineChart.getData().add(series);
     }
-    int calPatient(){
+        int calPatient(){
         //counter increases and count no. of patient after iterating over the patient records list//
         int counter = 0;
         for(PatientRecord patientRecord : patientRecords){
@@ -95,8 +97,7 @@ public class DashboardController extends TableCell<PatientRecord, Void> implemen
         }
         return counter;
     }
-
-    int calDoctor() {
+        int calDoctor() {
         //calculates the number of doctor after iterating over the set DiagnosisController.practitioner//
         int counter = 0;
         for (String s : DiagnosisController.practitioner) {
@@ -105,5 +106,36 @@ public class DashboardController extends TableCell<PatientRecord, Void> implemen
         }
         return counter;
     }
+
+        // below handles patient side of view
+        private void patientView() throws IOException {
+            PatientAccHandler p = new PatientAccHandler();
+            List<PatientRecord> patients_records = p.readCSV(PatientRecord.filename);
+            FileReader fileReader = new FileReader("user_login_data.txt");
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String eachUserData = bufferedReader.readLine();
+            String ic = null;
+            while (eachUserData != null) {
+                String[] splittedUserData = eachUserData.split(",");
+                if(splittedUserData[0].equals(enteredUsername)){
+                    ic = splittedUserData[1];
+                    break;
+                } eachUserData = bufferedReader.readLine();
+            }
+            for (PatientRecord patient : patients_records){
+                if (ic == null){
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("IC not found in database");
+                    alert.setContentText("IC not found, please contact hospital admin to check status.");
+                    alert.showAndWait();
+                    return;
+                }
+                if (patient.getP_Ic().equals(ic)){
+                    ViewModel.patientProfile(patient);
+                    break;
+                }
+            }
+        }
 }
 

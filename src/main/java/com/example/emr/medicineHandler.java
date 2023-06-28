@@ -1,5 +1,7 @@
 package com.example.emr;
 
+import com.example.emr.Records.PatientRecord;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;

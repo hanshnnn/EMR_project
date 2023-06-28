@@ -1,6 +1,6 @@
 package com.example.emr.Controllers;
 import com.example.emr.PatientAccHandler;
-import com.example.emr.PatientRecord;
+import com.example.emr.Records.PatientRecord;
 import com.example.emr.ViewModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,6 +18,8 @@ import javafx.stage.FileChooser;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -33,6 +35,7 @@ public class RegistrationController implements Initializable {
     public TextField textfield_address;
     public Label label_allergies;
     public ChoiceBox ChoiceBox_allergies;
+
     public Label label_dateofadmission;
     public Label label_pastmedicalrecord;
     public Button submit_Btn;
@@ -157,15 +160,51 @@ public class RegistrationController implements Initializable {
 
     private void createPatient() throws IOException {
         String ic = textfield_icno.getText();
+        LocalDate doa = textfield_doa.getValue();
         String name = textfield_name.getText();
-        String dob = String.valueOf(textfield_dob.getValue());
+        LocalDate dob = textfield_dob.getValue();
         String address = textfield_address.getText();
-        String doa = String.valueOf(textfield_doa.getValue());
         String gender = (String) Choicebox_gender.getValue();
         String allergies = (String) ChoiceBox_allergies.getValue();
         String pmr = textarea_pmr.getText();
-        PatientRecord patientRecord = new PatientRecord(name,ic, LocalDate.parse(dob),gender,address,allergies,LocalDate.parse(doa),pmr);
+        PatientRecord patientRecord = new PatientRecord(ic,doa,name,dob,gender,address,allergies,pmr);
 
+        if (ic.isEmpty() || name.isEmpty() || dob == null  || address.isEmpty() || doa == null ||  gender.isEmpty() || allergies.isEmpty() || pmr.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please fill in all the required fields.");
+            alert.showAndWait();
+            return;
+        }
+        String icNum = "YYMMDD";
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMdd");
+
+        String date = ic.substring(0,6);
+
+        try {
+
+            LocalDate parsedDate = LocalDate.parse(date, formatter);
+
+            String formattedDate = parsedDate.format(formatter);
+
+            if (ic.length() != 12 || !date.equals(formattedDate)) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("IC must be in the format: " + icNum);
+                alert.showAndWait();
+                return;
+            }
+        } catch (DateTimeParseException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Invalid IC format. IC must be in the format: " + icNum);
+            alert.showAndWait();
+            return;
+        }
         if (this.ImageFile != null) {
             String imagePath = "ImageFile/" + generateImageName();
             File destinationFile = new File(imagePath);
@@ -189,7 +228,7 @@ public class RegistrationController implements Initializable {
         next_Btn.setOnAction(e -> {
             try {
                 System.out.println("next btn clicked");
-                new ViewModel().showMedicalHistoryForm(ic, doa);
+                new ViewModel().showMedicalHistoryForm(ic, doa.toString());
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }

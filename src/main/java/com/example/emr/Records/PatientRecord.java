@@ -1,5 +1,6 @@
-package com.example.emr;
+package com.example.emr.Records;
 
+import com.example.emr.PatientAccHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.image.Image;
@@ -16,8 +17,8 @@ public class PatientRecord implements Comparable<PatientRecord>{
     private String p_Allergies;
     private String p_Doa;
     private String p_Pmr;
-private Button del_Btn;
-private Hyperlink view_text;
+    private Button del_Btn;
+    private Hyperlink view_text;
 
     private String imagePath;
     public static String filename = "patient.csv";
@@ -25,10 +26,10 @@ private Hyperlink view_text;
     private Image img;
 
     public PatientRecord(){}
-    public PatientRecord(String name, String ic, LocalDate dob, String gender, String address, String allergies, LocalDate doa , String pmr){
-        this.p_Name = name;
+    public PatientRecord(String ic, LocalDate doa, String name, LocalDate dob,String gender, String address, String allergies, String pmr){
         this.p_Ic = ic;
         this.p_Dob = dob.toString();
+        this.p_Name = name;
         this.p_Address = address;
         this.p_Allergies = allergies;
         this.p_Doa = doa.toString();

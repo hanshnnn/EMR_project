@@ -17,3 +17,7 @@ ic,doa,symptoms,remark,practitioner,diagnosis_code
 020616-11-8867,2023-06-19,Nausea Diarrhea,f,Dr. Jessica Anderson,J45.21=Mild persistent asthma
 020616-11-8867,2023-06-19,Vomiting Chest pain,h,Dr. Sarah Davis,J45.20=Mild intermittent asthma
 030904-11-1718,2023-08-17,Diarrhea,h,Dr. Sarah Davis,J45.21=Mild persistent asthma
+030904-11-1718,2023-06-22,Headache Nausea Abdominal pain,serious issue,Dr. Olivia Taylor,I25.9=Stable angina
+030904-11-1718,2023-06-22,Fatigue Diarrhea,check,Dr. Samantha Thompson,J45.23=Severe persistent asthma
+030904-11-1718,2023-06-13,Fever Fatigue Vomiting,hi john doe,Dr. Samantha Thompson,E11=Type-2 diabetes
+041117-11-1718,2023-05-31,Nausea Vomiting Chest pain Cough Nausea,so whatever you want,Dr. Matthew Martinez,J45.20=Mild intermittent asthma

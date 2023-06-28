@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
@@ -12,75 +12,86 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Separator layoutX="117.0" orientation="VERTICAL" prefHeight="720.0" prefWidth="7.0" />
-      <TabPane layoutX="120.0" prefHeight="723.0" prefWidth="1160.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.topAnchor="0.0">
-        <tabs>
-          <Tab fx:id="profile_Tab" text="Profile" />
-          <Tab fx:id="analysis_Tab" text="Analysis">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" fx:id="xrayTab">
-                     <children>
-                        <Text fill="WHITE" layoutX="26.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEST TYPE :">
-                           <font>
-                              <Font name="Microsoft Sans Serif" size="18.0" />
-                           </font>
-                        </Text>
-                        <ComboBox fx:id="testType" layoutX="148.0" layoutY="39.0" prefHeight="35.0" prefWidth="252.0" promptText="X-ray" />
-                        <Text fill="WHITE" layoutX="160.0" layoutY="476.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REMARKS :">
-                           <font>
-                              <Font name="Microsoft Sans Serif" size="18.0" />
-                           </font>
-                        </Text>
-                        <Button fx:id="save" layoutX="756.0" layoutY="632.0" mnemonicParsing="false" style="-fx-background-color: #9000ff;" text="Save" textFill="WHITE" />
-                        <Button fx:id="logAnalysis" layoutX="1069.0" layoutY="659.0" mnemonicParsing="false" style="-fx-background-color: #9000ff;" text="Log Analysis" textFill="WHITE" />
-                        <ImageView fitHeight="232.0" fitWidth="321.0" layoutX="55.0" layoutY="143.0" fx:id="xray_png1">
-                           <image>
-                              <Image url="@../../../image/Group 68.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="232.0" fitWidth="321.0" layoutX="802.0" layoutY="152.0" fx:id="xray_png3">
-                           <image>
-                              <Image url="@../../../image/Group 68.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="232.0" fitWidth="321.0" layoutX="428.0" layoutY="148.0" fx:id="xray_png2">
-                           <image>
-                              <Image url="@../../../image/Group 68.png" />
-                           </image>
-                        </ImageView>
-                        <TextArea fx:id="remarks" layoutX="265.0" layoutY="456.0" prefHeight="160.0" prefWidth="580.0" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-            <Tab fx:id="diagnosis_Tab" text="Diagnosis">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-            <Tab fx:id="treatment_Tab" text="Treatment">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-            <Tab fx:id="sum_Tab" text="Summary">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
-      <ImageView layoutX="-1.0" layoutY="593.0">
-         <image>
-            <Image url="@../../../image/User_cicrle.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="15.0" layoutY="41.0">
-         <image>
-            <Image url="@../../../image/default.png" />
-         </image>
-      </ImageView>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1230.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emr.Controllers.XRayTestController">
+    <children>
+        <TabPane prefHeight="723.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab fx:id="profile_Tab" disable="true" text="Profile" />
+                <Tab fx:id="analysis_Tab" text="Analysis">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" fx:id="xrayTab">
+                            <children>
+                                <Text fill="WHITE" layoutX="26.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEST TYPE :">
+                                    <font>
+                                        <Font name="Microsoft Sans Serif" size="18.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="WHITE" layoutX="160.0" layoutY="476.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REMARKS :">
+                                    <font>
+                                        <Font name="Microsoft Sans Serif" size="18.0" />
+                                    </font>
+                                </Text>
+                                <Button fx:id="save" layoutX="703.0" layoutY="632.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #9000ff;" text="Save" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Button>
+                                <Button fx:id="logAnalysis" layoutX="1069.0" layoutY="659.0" mnemonicParsing="false" style="-fx-background-color: #9000ff;" text="Log Analysis" textFill="WHITE" />
+                                <ImageView fitHeight="232.0" fitWidth="321.0" layoutX="55.0" layoutY="143.0" fx:id="xray_png1">
+                                    <image>
+                                        <Image url="@../../../image/Group68.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="232.0" fitWidth="321.0" layoutX="802.0" layoutY="152.0" fx:id="xray_png3">
+                                    <image>
+                                        <Image url="@../../../image/Group68.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="232.0" fitWidth="321.0" layoutX="428.0" layoutY="148.0" fx:id="xray_png2">
+                                    <image>
+                                        <Image url="@../../../image/Group68.png" />
+                                    </image>
+                                </ImageView>
+                                <TextArea fx:id="remarks" layoutX="265.0" layoutY="456.0" prefHeight="160.0" prefWidth="580.0" />
+                                <Button layoutX="56.0" layoutY="141.0" mnemonicParsing="false" opacity="0.0" prefHeight="234.0" prefWidth="320.0" text="Button" fx:id="xrayButton1" />
+                                <Button layoutX="429.0" layoutY="147.0" mnemonicParsing="false" opacity="0.0" prefHeight="234.0" prefWidth="320.0" text="Button" fx:id="xrayButton2" />
+                                <Button layoutX="803.0" layoutY="150.0" mnemonicParsing="false" opacity="0.0" prefHeight="234.0" prefWidth="320.0" text="Button" fx:id="xrayButton3" />
+                                <Text fx:id="XRaySaved" fill="#b7bffa" layoutX="828.0" layoutY="668.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Successfully Saved!" visible="false">
+                                    <font>
+                                        <Font name="Microsoft Sans Serif" size="18.0" />
+                                    </font>
+                                </Text>
+                                <MenuButton fx:id="testType" layoutX="159.0" layoutY="37.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="253.0" style="-fx-background-color: #9000ff;" text="XRay Analysis " textFill="WHITE">
+                                    <items>
+                                        <MenuItem fx:id="PhysicalAnalysis" mnemonicParsing="false" text="Physical Analysis" />
+                                        <MenuItem fx:id="SalivaAnalysis" mnemonicParsing="false" text="Saliva Analysis" />
+                                        <MenuItem fx:id="UrineAnalysis" mnemonicParsing="false" text="Urine Analysis" />
+                                        <MenuItem fx:id="XRayAnalysis" mnemonicParsing="false" text="XRay Analysis" visible="false" />
+                                        <MenuItem fx:id="bloodAnalysis" mnemonicParsing="false" text="Blood Analysis" />
+                                    </items>
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </MenuButton>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="diagnosis_Tab" disable="true" text="Diagnosis">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <Tab fx:id="treatment_Tab" disable="true" text="Treatment">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <Tab fx:id="sum_Tab" disable="true" text="Summary">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
 </AnchorPane>

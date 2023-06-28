@@ -1,8 +1,7 @@
 package com.example.emr.ActionCells;
 
 import com.example.emr.*;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import com.example.emr.Records.PatientRecord;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TableCell;
 

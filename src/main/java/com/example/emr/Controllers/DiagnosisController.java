@@ -1,6 +1,7 @@
 package com.example.emr.Controllers;
 
 import com.example.emr.*;
+import com.example.emr.Records.PatientRecord;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -15,16 +16,30 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class DiagnosisController implements Initializable {
-    
+public class DiagnosisController{
+
+    @FXML
+    private Tab analysis_tab;
+
+    @FXML
+    private Tab profile_tab1;
+
+    @FXML
+    private Tab profile_tabb;
+
+    @FXML
+    private Tab summary_tab;
+
+    @FXML
+    private Tab treatment_tab;
+
+
     public Button add_symptoms;
     public Button add_diagnosis;
     public Button to_treatment;
     public ListView<String> symptoms_view;
     public ChoiceBox<String> practitioner_box;
     public Tab diagnosis_tab;
-    public Tab profile_tab;
-    public Tab treatment_tab;
     public TextArea remark_text;
     private ObservableList<String> selectedItems = FXCollections.observableArrayList();
     private ObservableList<Map.Entry<String, String>> keyValueList;
@@ -70,9 +85,9 @@ public class DiagnosisController implements Initializable {
     public void setPatientProcedureRecordController(PatientProcedureRecordController patientProcedureRecordController) {
         this.patientProcedureRecordController = patientProcedureRecordController;
     }
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    public void initialize(PatientRecord rowData) {
+        this.rowData = rowData;
         add_symptoms.setOnMouseClicked(mouseEvent -> {
             symptoms_view.setVisible(true);
         });
@@ -158,6 +173,14 @@ public class DiagnosisController implements Initializable {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        });
+
+        analysis_tab.setOnSelectionChanged(e -> {
+            ViewModel.showAnalysisBlank(rowData);
+        });
+        // navigation bar
+        profile_tabb.setOnSelectionChanged(e ->{
+            ViewModel.showPatientProfile(rowData);
         });
     }
 

@@ -1,7 +1,7 @@
 package com.example.emr.ActionCells;
 
 import com.example.emr.PatientAccHandler;
-import com.example.emr.PatientRecord;
+import com.example.emr.Records.PatientRecord;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;

@@ -115,6 +115,17 @@ IC,Doa, Code, Date, Description, Price
 020616-11-8867,2023-06-19,J45.21=Mild persistent asthma,03/07/2023,Short-acting bronchodilators,RM50
 020616-11-8867,2023-06-19,J45.20=Mild intermittent asthma,29/06/2023,Avoidance of triggers,RM0
 020616-11-8867,2023-06-19,J45.20=Mild intermittent asthma,01/07/2023,Short-acting bronchodilators,RM50
+030904-11-1718,2023-06-22,I25.9=Stable angina,30/06/2023,Lifestyle modifications,RM20
+030904-11-1718,2023-06-22,I25.9=Stable angina,02/07/2023,Medications,RM20
+030904-11-1718,2023-06-22,I25.9=Stable angina,04/07/2023,Percutaneous coronary intervention (angioplasty) or coronary artery bypass grafting (CABG),RM200
+030904-11-1718,2023-06-22,I25.9=Stable angina,30/06/2023,Lifestyle modifications,RM20
+030904-11-1718,2023-06-22,I25.9=Stable angina,02/07/2023,Medications,RM20
+030904-11-1718,2023-06-22,I25.9=Stable angina,04/07/2023,Percutaneous coronary intervention (angioplasty) or coronary artery bypass grafting (CABG),RM200
+030904-11-1718,2023-06-22,J45.23=Severe persistent asthma,30/06/2023,Avoidance of triggers,RM0
+030904-11-1718,2023-06-22,J45.23=Severe persistent asthma,02/07/2023,High-dose inhaled corticosteroids,RM300
+030904-11-1718,2023-06-22,J45.23=Severe persistent asthma,04/07/2023,Long-acting bronchodilators,RM200
+030904-11-1718,2023-06-22,J45.23=Severe persistent asthma,06/07/2023,Oral corticosteroids,RM100
+030904-11-1718,2023-06-22,J45.23=Severe persistent asthma,08/07/2023,Short-acting bronchodilators,RM120
 030904-11-1718,2023-08-17,J45.21=Mild persistent asthma,29/06/2023,Avoidance of triggers,RM0
 030904-11-1718,2023-08-17,J45.21=Mild persistent asthma,01/07/2023,Low-dose inhaled corticosteroids,RM100
 030904-11-1718,2023-08-17,J45.21=Mild persistent asthma,03/07/2023,Short-acting bronchodilators,RM50

@@ -3,7 +3,7 @@ package com.example.emr.Controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.io.*;
-import com.example.emr.PatientRecord;
+import com.example.emr.Records.PatientRecord;
 import com.example.emr.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

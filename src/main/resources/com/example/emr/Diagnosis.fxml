@@ -28,7 +28,8 @@
    <children>
       <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="713.0" prefWidth="1096.0" style="-fx-background-color: #000000;" stylesheets="@diagnosis.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab fx:id="profile_tab" text="Profile" />
+            <Tab fx:id="profile_tab1" />
+            <Tab fx:id="profile_tabb" text="Profile" />
             <Tab fx:id="analysis_tab" text="Analysis" />
             <Tab fx:id="diagnosis_tab" style="-fx-background-color: #9747ff; -fx-text-fill: #ffffffff;" text="Diagnosis">
                <content>

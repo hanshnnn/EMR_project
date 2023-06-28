@@ -1,7 +1,7 @@
 package com.example.emr.Controllers;
 
 import com.example.emr.*;
-import javafx.application.Platform;
+import com.example.emr.Records.PatientRecord;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class TreatmentController extends PatientProcedureRecordController implements Initializable {
+public class TreatmentController extends PatientProcedureRecordController{
 
     public Text diagCode_text;
     public Text appointDate_text;
@@ -31,6 +31,8 @@ public class TreatmentController extends PatientProcedureRecordController implem
     public ImageView image_add;
     @FXML
     public ImageView generateSum_Btn;
+    @FXML
+    private Tab diagnosis_tab;
     public ImageView image_add1;
     public TableView table_procedure1;
     public TableColumn codeColumn1;
@@ -44,9 +46,17 @@ public class TreatmentController extends PatientProcedureRecordController implem
 
     @FXML
     private DatePicker datePicker;
-    public Tab profile_tab;
-    public Tab diagnosis_tab;
-    public Tab treatment_tab;
+    @FXML
+    private Tab analysis_tab;
+
+    @FXML
+    private Tab profile_tabb;
+
+    @FXML
+    private Tab summary_tab;
+
+    @FXML
+    private Tab treatment_tab;
 
     public String diagnosis;
     public LocalDate selectedDate;
@@ -85,8 +95,10 @@ public class TreatmentController extends PatientProcedureRecordController implem
     ObservableList<com.example.emr.medicineRecord> observableArrayList = FXCollections.observableArrayList();
 
     //get diag code from diagnosis page
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    public void initialize(PatientRecord rowdata) {
+        this.rowData = rowdata;
+
         codeColumn.setCellValueFactory(new PropertyValueFactory<>("code"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
@@ -129,6 +141,14 @@ public class TreatmentController extends PatientProcedureRecordController implem
         });
 
         table_medicine.setEditable(true);
+
+        analysis_tab.setOnSelectionChanged(e -> {
+            ViewModel.showAnalysisBlank(rowData);
+        });
+        // navigation bar
+        profile_tabb.setOnSelectionChanged(e ->{
+            ViewModel.showPatientProfile(rowData);
+        });
 
         TableColumn<com.example.emr.medicineRecord, String> MedicineCode = new TableColumn<com.example.emr.medicineRecord, String>("Medicine Code");
         MedicineCode.setCellValueFactory(new PropertyValueFactory<com.example.emr.medicineRecord, String>("chosenMC"));
@@ -194,6 +214,71 @@ public class TreatmentController extends PatientProcedureRecordController implem
 
     }
 
+    public void initializePatientView(String diagnosis, PatientRecord rowData) throws IOException {
+        this.diagnosis = diagnosis;
+        this.rowData = rowData;
+
+        codeColumn.setCellValueFactory(new PropertyValueFactory<>("code"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        // tab initializing
+        analysis_tab.setText("");
+        analysis_tab.setDisable(true);
+        diagnosis_tab.setText("");
+        diagnosis_tab.setDisable(true);
+        profile_tabb.setText("");
+        profile_tabb.setDisable(true);
+        profile_tabb.setOnSelectionChanged(e -> {
+            try {
+                ViewModel.patientProfile(rowData);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
+        treatment_tab.setDisable(false);
+        treatment_tab.setText("Treatment Summary");
+
+        // interface changing
+        diagCode_label.setText(diagnosis);
+        image_add.setVisible(false);
+        image_add1.setVisible(false);
+        displayBtn2.setVisible(false);
+        displayBtn3.setVisible(false);
+
+
+        // Medicine Table
+        TableColumn<com.example.emr.medicineRecord, String> MedicineCode = new TableColumn<com.example.emr.medicineRecord, String>("Medicine Code");
+        MedicineCode.setCellValueFactory(new PropertyValueFactory<com.example.emr.medicineRecord, String>("chosenMC"));
+        MedicineCode.setCellFactory(TextFieldTableCell.forTableColumn());
+        TableColumn<com.example.emr.medicineRecord, String> duration = new TableColumn<>("Duration");
+        duration.setCellValueFactory(new PropertyValueFactory<com.example.emr.medicineRecord, String>("duration"));
+        duration.setCellFactory(TextFieldTableCell.forTableColumn());
+        TableColumn<com.example.emr.medicineRecord, String> Quantity = new TableColumn<>("Quantity");
+        Quantity.setCellValueFactory(new PropertyValueFactory<com.example.emr.medicineRecord, String>("quantity"));
+        Quantity.setCellFactory(TextFieldTableCell.forTableColumn());
+        TableColumn<com.example.emr.medicineRecord, String> prescribedBy = new TableColumn<com.example.emr.medicineRecord, String>("Prescribed By");
+        prescribedBy.setCellValueFactory(new PropertyValueFactory<com.example.emr.medicineRecord, String>("chosenDoc"));
+        prescribedBy.setCellFactory(TextFieldTableCell.forTableColumn());
+        TableColumn<com.example.emr.medicineRecord, String> Remarks = new TableColumn<>("Remarks");
+        Remarks.setCellValueFactory(new PropertyValueFactory<com.example.emr.medicineRecord, String>("remarks"));
+        Remarks.setCellFactory(TextFieldTableCell.forTableColumn());
+
+        // initiate medicine table
+        table_medicine.getColumns().addAll(MedicineCode, duration, Quantity, prescribedBy, Remarks);
+        medicineHandler pah = new medicineHandler();
+
+        // display medicine table
+        List<medicineRecord> matchMedicineLogs = searchIc_Doa_Code("", rowData);
+        displayMedicines(matchMedicineLogs);
+
+        // display procedures
+        displaySavedProc();
+
+    }
+
     //PROCEDURE//
     public void updateLabelText(String diagnosis,PatientRecord rowData) {
         this.rowData = rowData;
@@ -229,7 +314,6 @@ public class TreatmentController extends PatientProcedureRecordController implem
                 displayMedicines(matchingIc2);
             }
         }
-
         private void displayMedicines (List < medicineRecord > medicines) {
             if (medicines.isEmpty()) {
             } else {
